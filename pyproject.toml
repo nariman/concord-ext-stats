@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hugo-ext-status"
-version = "1.0.0"
+version = "1.0.1"
 description = "Bot status middleware for Hugo"
 authors = ["Nariman Safiulin <woofilee@gmail.com>"]
 license = "MIT"

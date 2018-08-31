@@ -33,7 +33,7 @@ from hugo.handler import event, not_authored_by_bot, pattern
 from hugo.middleware import MiddlewareState, OneOfAll, collection_of, chain_of
 
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 class State:
@@ -111,8 +111,8 @@ async def on_message(*args, ctx: Context, next, state: State, **kwargs):
                 if member.status is not discord.Status.offline:
                     total_online_members += 1
         #
-        total_text_channels = len(guild.text_channels)
-        total_voice_channels = len(guild.voice_channels)
+        total_text_channels += len(guild.text_channels)
+        total_voice_channels += len(guild.voice_channels)
     #
     embed.add_field(
         name="Guilds",
