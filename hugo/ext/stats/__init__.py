@@ -33,7 +33,7 @@ from hugo.handler import event, not_authored_by_bot, pattern
 from hugo.middleware import MiddlewareState, OneOfAll, collection_of, chain_of
 
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 
 class State:
@@ -46,7 +46,7 @@ class State:
 
 @event(EventType.READY)
 async def on_ready(*args, ctx: Context, next, state: State, **kwargs):
-    """Save information about start time."""
+    """Save start time information."""
     if not state.initialized:
         state.initialized = True
         state.start_time = pendulum.now(tz=pendulum.UTC)
@@ -145,13 +145,13 @@ async def on_message(*args, ctx: Context, next, state: State, **kwargs):
             [
                 f"{total_text_channels + total_voice_channels}+ total",
                 f"{total_text_channels}+ text",
-                f"{total_voice_channels}+ text",
+                f"{total_voice_channels}+ voice",
             ]
             if total_unavailable_guilds > 0
             else [
                 f"{total_text_channels + total_voice_channels} total",
                 f"{total_text_channels} text",
-                f"{total_voice_channels} text",
+                f"{total_voice_channels} voice",
             ]
         ),
     )
