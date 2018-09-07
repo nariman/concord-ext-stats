@@ -16,6 +16,7 @@ classifiers = [
     "Natural Language :: English",
     "Natural Language :: Russian",
     "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 packages = [
