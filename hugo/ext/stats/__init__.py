@@ -27,10 +27,15 @@ import discord
 import pendulum
 
 import hugo
-from hugo.constants import EventType
-from hugo.context import Context
-from hugo.handler import event, not_authored_by_bot, pattern
-from hugo.middleware import MiddlewareState, OneOfAll, collection_of, chain_of
+from hugo.core.constants import EventType
+from hugo.core.context import Context
+from hugo.core.handler import event, not_authored_by_bot, pattern
+from hugo.core.middleware import (
+    MiddlewareState,
+    OneOfAll,
+    collection_of,
+    chain_of,
+)
 
 
 __version__ = "1.0.2"
