@@ -1,3 +1,4 @@
+
 """
 The MIT License (MIT)
 
@@ -21,8 +22,21 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-from hugo.ext.stats.middleware import Connect, Message
-from hugo.ext.stats.state import State
 
+class State:
+    """State for bot's statistics.
 
-__version__ = "2.1.0"
+    Attributes
+    ----------
+    initialized : bool
+        Is bot started or not.
+    first_connect_time : datetime
+        Date and time when bot has started.
+    last_connect_time : datetime
+        Last date and time when bot has reconnected.
+    """
+
+    def __init__(self):
+        self.initialized = False
+        self.first_connect_time = None
+        self.last_connect_time = None
