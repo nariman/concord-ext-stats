@@ -23,6 +23,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 from hugo.ext.stats.middleware import Connect, Message
 from hugo.ext.stats.state import State
+from hugo.ext.stats.utils import format_datetime
 
 
-__version__ = "2.1.0"
+__version__ = "2.1.1"

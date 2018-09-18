@@ -21,21 +21,9 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
+import datetime
 
-class State:
-    """State for bot's statistics.
 
-    Attributes
-    ----------
-    initialized : bool
-        Is bot started or not.
-    first_connect_time : datetime
-        Date and time when bot has started.
-    last_connect_time : datetime
-        Last date and time when bot has reconnected.
-    """
-
-    def __init__(self):
-        self.initialized = False
-        self.first_connect_time = None
-        self.last_connect_time = None
+def format_datetime(dt: datetime.datetime) -> str:
+    """Format date and time by pattern."""
+    return dt.format("ddd, MMM D, YYYY HH:mm:ss zz", locale="en")

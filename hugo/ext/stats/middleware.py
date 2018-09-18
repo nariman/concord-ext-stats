@@ -31,6 +31,7 @@ from hugo.core.context import Context
 from hugo.core.middleware import Middleware, MiddlewareState
 
 from hugo.ext.stats.state import State
+from hugo.ext.stats.utils import format_datetime
 
 
 class Connect(Middleware):
@@ -141,11 +142,11 @@ class Message(Middleware):
         uptime = (
             pendulum.now(tz=pendulum.UTC) - state.first_connect_time
         ).in_words()
-        started = state.first_connect_time.to_day_datetime_string()
+        started = format_datetime(state.first_connect_time)
 
         values = [f"Uptime for {uptime}", f"Started on {started}"]
         if state.last_connect_time is not None:
-            reconnected = state.last_connect_time.to_day_datetime_string()
+            reconnected = format_datetime(state.last_connect_time)
             values.append(f"Last reconnection on {reconnected}")
         #
         embed.add_field(
