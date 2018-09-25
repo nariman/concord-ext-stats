@@ -26,4 +26,4 @@ from hugo.ext.stats.state import State
 from hugo.ext.stats.utils import format_datetime
 
 
-__version__ = "2.1.1"
+__version__ = "2.2.0"
