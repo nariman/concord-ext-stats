@@ -64,7 +64,7 @@ name = "black"
 optional = false
 platform = "*"
 python-versions = ">=3.6"
-version = "18.6b4"
+version = "18.9b0"
 
 [package.dependencies]
 appdirs = "*"
@@ -104,12 +104,12 @@ version = "3.0.4"
 
 [[package]]
 category = "dev"
-description = "A simple wrapper around optparse for powerful command line utilities."
+description = "Composable command line interface toolkit"
 name = "click"
 optional = false
 platform = "*"
-python-versions = "*"
-version = "6.7"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "7.0"
 
 [[package]]
 category = "main"
@@ -118,16 +118,17 @@ name = "discord.py"
 optional = false
 platform = "*"
 python-versions = "*"
-version = "1.0.0a1577+g77239e4"
+version = "1.0.0a1580+g836ae73"
 
 [package.dependencies]
 aiohttp = ">=3.3.0,<3.5.0"
 websockets = ">=6.0,<7.0"
 
 [package.source]
-reference = "77239e4f1588b7cf99ca54c36665ebfc4ad5bd57"
+reference = "836ae730401ea370aa10127bb9c86854c8b516ac"
 type = "git"
 url = "https://github.com/Rapptz/discord.py.git"
+
 [[package]]
 category = "main"
 description = "Core library for Hugo"
@@ -304,7 +305,7 @@ idna = ">=2.0"
 multidict = ">=4.0"
 
 [metadata]
-content-hash = "eccd31fc32338331098f45b359b1f6556fe4264748daa5b88ef7bb5fb434c905"
+content-hash = "065355b2972e93827674faf7b842b7498ed3e9f72d02efd34190e62e675cbe37"
 platform = "*"
 python-versions = "^3.6"
 
@@ -314,11 +315,11 @@ appdirs = ["9e5896d1372858f8dd3344faf4e5014d21849c756c8d5701f78f8a103b372d92", "
 "aspy.yaml" = ["04d26279513618f1024e1aba46471db870b3b33aef204c2d09bcf93bea9ba13f", "0a77e23fafe7b242068ffc0252cee130d3e509040908fc678d9d1060e7494baa"]
 async-timeout = ["474d4bc64cee20603e225eb1ece15e248962958b45a3648a9f5cc29e827a610c", "b3c0ddc416736619bd4a95ca31de8da6920c3b9a140c64dbef2b2fa7bf521287"]
 attrs = ["10cbf6e27dbce8c30807caf056c8eb50917e0eaafe86347671b57254006c3e69", "ca4be454458f9dec299268d472aaa5a11f67a4ff70093396e1ceae9c76cf4bbb"]
-black = ["22158b89c1a6b4eb333a1e65e791a3f8b998cf3b11ae094adb2570f31f769a44", "4b475bbd528acce094c503a3d2dbc2d05a4075f6d0ef7d9e7514518e14cc5191"]
+black = ["817243426042db1d36617910df579a54f1afd659adb96fc5032fcf4b36209739", "e030a9a28f542debc08acceb273f228ac422798e5215ba2a791a6ddeaaca22a5"]
 cached-property = ["3a026f1a54135677e7da5ce819b0c690f156f37976f3e30c5430740725203d7f", "9217a59f14a5682da7c4b8829deadbfc194ac22e9908ccf7c8820234e80a1504"]
 cfgv = ["73f48a752bd7aab103c4b882d6596c6360b7aa63b34073dd2c35c7b4b8f93010", "d1791caa9ff5c0c7bce80e7ecc1921752a2eb7c2463a08ed9b6c96b85a2f75aa"]
 chardet = ["84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae", "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"]
-click = ["29f99fc6125fbc931b758dc053b3114e55c77a6e4c6c3a2674a2dc986016381d", "f15516df478d5a56180fbf80e68f206010e6d160fc39fa508b65e035fd75130b"]
+click = ["2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13", "5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7"]
 "discord.py" = []
 hugo-core = ["13eb299474359bcd00300bcafa180a8642895c9ea0e536bb09c1c2296aac69a4", "56409bc2412e12a2c020ae66067559d8cbf5c4b3ca641c26d44a8a05b7a48dfb"]
 identify = ["a425281e5578eb08651cd205e64b5c3660de5ba33860d16450dd5f6e478f50ff", "baa10ef6a82d45a29e4b179866dce7cf41a271d1e6c678c293922b50375d42be"]
