@@ -21,19 +21,23 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
+from typing import Optional
+
+import pendulum
+
 
 class State:
     """State for bot's statistics.
 
-    Attributes
-    ----------
-    initialized : bool
-        Is bot started or not.
-    first_connect_time : datetime
-        Date and time when bot has started.
-    last_connect_time : datetime
-        Last date and time when bot has reconnected.
+    Attributes:
+        initialized: Is bot started or not.
+        first_connect_time: Date and time when bot has started.
+        last_connect_time: Last date and time when bot has reconnected.
     """
+
+    initialized: bool
+    first_connect_time: Optional[pendulum.DateTime]
+    last_connect_time: Optional[pendulum.DateTime]
 
     def __init__(self):
         self.initialized = False

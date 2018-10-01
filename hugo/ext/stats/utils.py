@@ -21,9 +21,13 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-import datetime
+import pendulum
 
 
-def format_datetime(dt: datetime.datetime) -> str:
-    """Format date and time by pattern."""
+def format_datetime(dt: pendulum.DateTime) -> str:
+    """Format date and time by pattern.
+
+    Args:
+        dt: DateTime instance to format.
+    """
     return dt.format("ddd, MMM D, YYYY HH:mm:ss zz", locale="en")

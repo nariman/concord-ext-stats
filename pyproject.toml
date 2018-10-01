@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hugo-ext-stats"
 version = "2.2.0"
-description = "Bot statistics extension for Hugo"
+description = "Statistics extension for Hugo"
 authors = ["Nariman Safiulin <woofilee@gmail.com>"]
 license = "MIT"
 
