@@ -1,14 +1,14 @@
 [tool.poetry]
-name = "hugo-ext-status"
-version = "1.0.1"
-description = "Bot status middleware for Hugo"
+name = "cncrd-ext-stats"
+version = "3.0.0"
+description = "Statistics extension for Concord"
 authors = ["Nariman Safiulin <woofilee@gmail.com>"]
 license = "MIT"
 
 readme = "README.md"
-repository = "https://github.com/Roolat/hugo-ext-status"
+repository = "https://github.com/Roolat/concord-ext-stats"
 
-keywords = ["discord", "bot", "hugo"]
+keywords = ["discord", "concord", "bot", "stats"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: Console",
@@ -16,17 +16,22 @@ classifiers = [
     "Natural Language :: English",
     "Natural Language :: Russian",
     "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 packages = [
-    { include = "hugo" },
+    { include = "concord" },
 ]
 
 [tool.poetry.dependencies]
 python = "^3.6"
-"discord.py" = "^1.0.0a"
-hugo = "^0.5.0"
+cncrd = "^1.0.0"
+"discord.py" = { git = "https://github.com/Rapptz/discord.py.git", branch = "rewrite" }
 pendulum = "^2.0"
+
+[tool.poetry.dev-dependencies]
+black = "^18.9b0"
+pre-commit = "^1.10"
 
 [tool.black]
 line-length = 80
