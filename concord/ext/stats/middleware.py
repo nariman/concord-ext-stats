@@ -23,15 +23,15 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 from typing import Callable
 
+import concord
 import discord
 import pendulum
+from concord.client import Client
+from concord.context import Context
+from concord.middleware import Middleware, MiddlewareState
 
-import hugo
-from hugo.core.context import Context
-from hugo.core.middleware import Middleware, MiddlewareState
-
-from hugo.ext.stats.state import State
-from hugo.ext.stats.utils import format_datetime
+from concord.ext.stats.state import State
+from concord.ext.stats.utils import format_datetime
 
 
 class Connect(Middleware):
@@ -76,9 +76,30 @@ class Message(Middleware):
         """Set description (libraries version) to the embed."""
         embed.description = "\n".join(
             [
-                f"Hugo library v.{hugo.__version__}",
+                f"Concord library v.{concord.__version__}",
                 f"Discord.py library v.{discord.__version__}",
             ]
+        )
+
+    @staticmethod
+    def set_extensions_info(embed: discord.Embed, client: Client):
+        """Set extensions info to the embed."""
+        extension_manager = client.extension_manager
+        registered = len(extension_manager._extensions)
+        client_mw = len(extension_manager.client_middleware)
+        extension_mw = len(extension_manager.extension_middleware)
+
+        embed.add_field(
+            name="Extensions info",
+            inline=False,
+            value="\n".join(
+                [
+                    f"{registered} extension"
+                    f"{'' if registered == 1 else 's'} registered",
+                    f"{client_mw} client middleware",
+                    f"{extension_mw} extension middleware",
+                ]
+            ),
         )
 
     @staticmethod
@@ -162,6 +183,7 @@ class Message(Middleware):
 
         await self.set_author(embed, client)
         self.set_description(embed)
+        self.set_extensions_info(embed, client)
         await self.set_counters(embed, client)
         self.set_uptime(embed, state)
 

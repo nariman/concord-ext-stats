@@ -21,9 +21,11 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-from hugo.ext.stats.middleware import Connect, Message
-from hugo.ext.stats.state import State
-from hugo.ext.stats.utils import format_datetime
+from concord.ext.stats.extension import StatsExtension
+from concord.ext.stats.middleware import Connect, Message
+from concord.ext.stats.state import State
+from concord.ext.stats.utils import format_datetime
+from concord.ext.stats.version import version
 
 
-__version__ = "2.2.0"
+__version__ = version
