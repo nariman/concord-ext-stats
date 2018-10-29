@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "cncrd-ext-stats"
-version = "3.0.0"
+version = "0.1.0"
 description = "Statistics extension for Concord"
 authors = ["Nariman Safiulin <woofilee@gmail.com>"]
 license = "MIT"
 
 readme = "README.md"
-repository = "https://github.com/Roolat/concord-ext-stats"
+repository = "https://github.com/narimanized/concord-ext-stats"
 
 keywords = ["discord", "concord", "bot", "stats"]
 classifiers = [
@@ -25,13 +25,13 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.6"
-cncrd = "^1.0.0"
+cncrd = "^0.10.1"
 "discord.py" = { git = "https://github.com/Rapptz/discord.py.git", branch = "rewrite" }
 pendulum = "^2.0"
 
 [tool.poetry.dev-dependencies]
 black = "^18.9b0"
-pre-commit = "^1.10"
+pre-commit = "^1.12"
 
 [tool.black]
 line-length = 80
