@@ -6,7 +6,7 @@ authors = ["Nariman Safiulin <woofilee@gmail.com>"]
 license = "MIT"
 
 readme = "README.md"
-repository = "https://github.com/narimanized/concord-ext-stats"
+repository = "https://github.com/narimanizett/concord-ext-stats"
 
 keywords = ["discord", "concord", "bot", "stats"]
 classifiers = [
