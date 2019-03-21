@@ -30,7 +30,7 @@ cncrd = "^0.10.1"
 pendulum = "^2.0"
 
 [tool.poetry.dev-dependencies]
-black = "^18.9b0"
+black = "^19.3b0"
 pre-commit = "^1.12"
 
 [tool.black]
